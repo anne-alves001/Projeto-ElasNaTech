@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            background: gray url(Image/mosaico.jpg) repeat;
+        }
+    </style>
+    <script>
+        function soma() {
+            var n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            var resultado = n1 + n2;
+            alert("Resultado: " + resultado);
+        }
+
+        function subtracao() {
+            var n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            var resultado = n1 - n2;
+            alert("Resultado: " + resultado);
+        }
+
+        function multiplicacao() {
+            var n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            var resultado = n1 * n2;
+            alert("Resultado: " + resultado);
+        }
+
+        function divisao() {
+            var n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            var resultado = n1 / n2;
+            alert("Resultado: " + resultado);
+        }
+
+        function limpar() {
+            document.getElementById("n1").value = "";
+            document.getElementById("n2").value = "";
+        }
+    </script>
+</head>
+<body>
+    <form id="frm">
+        <div id="container">
+            <div id="topo">
+                <h1>Calculadora</h1>
+            </div>
+            <div id="left">
+                <div class="bloco1">
+                    <span>Introduza os números:</span><br>
+                    <input type="text" size="2" id="n1" placeholder="n1"><br>
+                    <input type="text" size="2" id="n2" placeholder="n2"><br><br>
+                    <input type="button" value="+" onClick="soma()">
+                    <input type="button" value="-" onClick="subtracao()">
+                    <input type="button" value="*" onClick="multiplicacao()">
+                    <input type="button" value="/" onClick="divisao()"><br><br>
+                    <input type="button" value="Limpar" onClick="limpar()">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
